@@ -25,14 +25,15 @@ class CalcController {
 
     initButtonsEvents() {
 
-        let buttons = document.querySelector("#buttons > g, #parts > g");
+        let buttons = document.querySelectorAll("#buttons > g, #parts > g");
 
-        console.log(buttons)
+        buttons.forEach((btn, index)=>{
 
-        buttons.addEventListener('click', e=>{
+            btn.addEventListener('click', e => {
 
-            console.log(e);
-            
+                console.log(btn.className.baseVal.replace("btn-",""));
+
+            });
         })
 
     }
